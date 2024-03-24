@@ -16,7 +16,7 @@ function App() {
           count is {count}
         </button>
         <p>
-          Hello there! 👋
+          Redi - React Spring 24 👋
         </p>
       </div>
     </>
