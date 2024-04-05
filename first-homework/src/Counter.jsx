@@ -12,7 +12,7 @@ function Counter() {
   return (
     <div className='counter'>
         <button onClick={minus}>-</button>
-        <h3>{count}</h3>
+        <h3>{count}</h3> 
         <button onClick={plus}>+</button>
     </div>
   )
