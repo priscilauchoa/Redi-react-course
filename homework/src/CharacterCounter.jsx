@@ -14,25 +14,24 @@
 
 //! Bonus Point:
 //your input accepts a character limit of 50. Display a message to the user when the limit is reached
-import { useState } from "react"; 
+import { useState } from "react";
 
 function CharacterCounter() {
   const [characters, setCharacters] = useState("")
-  
-  function counter(e){
-    if(e.target.value.length <= 50){
+
+  function counter(e) {
+    if (e.target.value.length <= 50) {
       setCharacters(e.target.value.length)
     }
-   
   }
   return (
     <div>
       <h1>Characters Counter Input</h1>
-      <input maxLength={50} onChange={(e)=>counter(e)}type="text"></input>
+      <input maxLength={50} onChange={(e) => counter(e)} type="text"></input>
       <br></br>
       <br></br>
-      { characters > 49 ? <h3 className="red">You typed 50 characters. Limit of characters achieved❗️❗️❗️ </h3> :
-      <h3 className="blue">You typed {characters} characters 🚀</h3> }
+      {characters > 49 ? <h3 className="red">You typed 50 characters. Limit of characters achieved❗️❗️❗️ </h3> :
+        <h3 className="blue">You typed {characters} characters 🚀</h3>}
     </div>
   );
 }
