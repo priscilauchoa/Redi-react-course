@@ -46,3 +46,11 @@
   display: flex;
   justify-content: space-around;
 }
+
+.red {
+  color: rgb(203, 47, 47);
+}
+
+.blue {
+  color: rgb(32, 169, 219);
+}
