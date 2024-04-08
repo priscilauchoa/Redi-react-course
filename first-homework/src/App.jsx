@@ -1,5 +1,6 @@
 import './App.css'
 import Counter from './Counter'
+import CharacterCounter from './CharacterCounter'
 
 function App() {
 
@@ -11,11 +12,12 @@ function App() {
       </div>
       <h1>Priscila Flores </h1>
       <div className="card">
-        <Counter />
+      <Counter />
 
         <p>
           Hello there! 👋
         </p>
+        <CharacterCounter />
       </div>
     </>
   )
