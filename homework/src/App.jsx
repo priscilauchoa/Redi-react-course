@@ -1,6 +1,7 @@
 import './App.css'
 import Counter from './Counter'
 import CharacterCounter from './CharacterCounter'
+import RestaurantView from './RestaurantView'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           Hello there! 👋
         </p>
         <CharacterCounter />
+        <RestaurantView />
       </div>
     </>
   )
