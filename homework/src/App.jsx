@@ -1,7 +1,8 @@
 import './App.css'
-import Counter from './Counter'
-import CharacterCounter from './CharacterCounter'
-import RestaurantView from './RestaurantView'
+import Counter from './components/Counter'
+import CharacterCounter from './components/CharacterCounter'
+import RestaurantView from './components/RestaurantView'
+import PlayList from './components/PlayList/PlayList'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         </p>
         <CharacterCounter />
         <RestaurantView />
+        <PlayList />
       </div>
     </>
   )

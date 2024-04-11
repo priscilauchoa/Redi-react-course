@@ -1,7 +1,7 @@
-import './RestaurantView.css'
-import spaghettiImage from "../src/assets/spaghetti.jpg"
-import lasagnaImage from "../src/assets/lasagna.jpg"
-import risottoImage from "../src/assets/risotto.jpg"
+import '../../src/components/RestaurantView.css'
+import spaghettiImage from "../assets/spaghetti.jpg"
+import lasagnaImage from "../assets/lasagna.jpg"
+import risottoImage from "../assets/risotto.jpg"
 // import OrderCard from "OrderCard.jsx"
 import { useState } from 'react'
 
