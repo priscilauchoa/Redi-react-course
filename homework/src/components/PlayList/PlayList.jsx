@@ -9,13 +9,17 @@ const PlayList = () => {
   const addToPlayList = (music) => {
       setPlayList([...playList, music])
   }
+  const playListMaps = playList.map((item, index) =>
+    <li key={index}>{item}</li>
+  );
   return (
     <>
       <h1>
         REDI React Playlist 
       </h1>
       <div className="plalist">
-        Your Playlist: {playList}<br></br>
+        <ul>Your Playlist: {playListMaps}<br></br></ul>
+        
       </div>
       <div className="menu">
        <Item imageMusic={amy} onClick={addToPlayList} nameMusic="Back to Black - Amy Winehouse" />
