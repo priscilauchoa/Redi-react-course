@@ -1,6 +1,6 @@
 import './App.css'
 import Counter from './components/Counter'
-import CharacterCounter from './components/CharacterCounter'
+import CharacterCounter from '../src/components/CharacterCounter/CharacterCounter'
 import RestaurantView from './components/RestaurantView'
 import PlayList from './components/PlayList/PlayList'
 
