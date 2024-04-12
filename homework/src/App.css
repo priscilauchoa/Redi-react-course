@@ -54,3 +54,23 @@
 .blue {
   color: rgb(32, 169, 219);
 }
+
+.playlist{
+ display: flex;
+ justify-content: space-between;
+ width: 100%;
+}
+
+.playlist > div{
+ display: flex;
+ align-items: center;
+}
+
+.playlist > div > button {
+  margin: 30px;
+}
+
+.playlist-img {
+  height: 100px !important;
+  width: 100px !important;
+}
