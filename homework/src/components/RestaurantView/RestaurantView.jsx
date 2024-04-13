@@ -1,7 +1,7 @@
-import '../../src/components/RestaurantView.css'
-import spaghettiImage from "../assets/spaghetti.jpg"
-import lasagnaImage from "../assets/lasagna.jpg"
-import risottoImage from "../assets/risotto.jpg"
+import '../RestaurantView//RestaurantView.css'
+import spaghettiImage from "../../assets/spaghetti.jpg"
+import lasagnaImage from "../../assets/lasagna.jpg"
+import risottoImage from "../../assets/risotto.jpg"
 // import OrderCard from "OrderCard.jsx"
 import { useState } from 'react'
 
@@ -11,7 +11,7 @@ const RestaurantView = () => {
       setSelectedMenuItem(nameDish)
   }
   return (
-    <>
+    <div className="container">
       <h1>
         REDI React Restaurant 
       </h1>
@@ -23,7 +23,7 @@ const RestaurantView = () => {
        <Item imageDish={lasagnaImage} onClick={addToCart} nameDish="Lasanha"/>
        <Item imageDish={risottoImage} onClick={addToCart} nameDish="Risotto" />
       </div>
-    </>
+    </div>
   )
 }
 
