@@ -21,6 +21,7 @@ const PasswordInput = () => {
   const [typeInput,setTextInput] = useState("password")
   const [disabled,setDisabled] = useState(false)
   const [isVisible,setIsVisible] = useState(false)
+  const [limitMessage, setLimitMessage] = useState(false)
   
   function handleIsVisisble(){
     setIsVisible(prevState => !prevState)
@@ -29,6 +30,8 @@ const PasswordInput = () => {
   function handleText(value){
     setText(value)
     setDisabled(false)
+    console.log(value.length)
+    value.length === 10 ? setLimitMessage(true) : setLimitMessage(false)
   }
 
   function showPass(){
@@ -43,13 +46,12 @@ const PasswordInput = () => {
   console.log("## disabled and isVisible",disabled, isVisible)
   return (
     <Fragment>
-      <div className="flex-container">
-        <input value={text} onChange={(e)=>handleText(e.target.value)} type={typeInput} />
-        {text}
+      <div className="flex-container container">
+        <input maxLength="10" value={text} onChange={(e)=>handleText(e.target.value)} type={typeInput} />
         <button onClick={showPass}>{typeInput == "password" ? "Show" : "Hide" }</button>
         <button disabled={disabled} onClick={clearPassword}>Clear</button> 
       </div>
-      <p className="warning">🚨 Must be no more than 10 characters!</p>
+      {limitMessage && <p className="warning">🚨 Must be no more than 10 characters!</p> }
     </Fragment>
   );
 };
