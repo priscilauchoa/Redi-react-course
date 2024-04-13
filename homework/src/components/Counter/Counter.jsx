@@ -12,9 +12,9 @@ function Counter() {
     <div className="container">
       <h2>Counter exercise class 7</h2>
       <div className="counter">
-        <CounterButton onClick={minus} label="-" bc="btn-red" />
+        <CounterButton onClick={minus} label="-" bc="bc-red" />
         <CounterContent count={count} />
-        <CounterButton onClick={plus} label="+" bc="btn-green" />
+        <CounterButton onClick={plus} label="+" bc="bc-green" />
       </div>
     </div>
   );
