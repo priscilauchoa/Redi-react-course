@@ -5,24 +5,13 @@ import RestaurantView from '../src/components/RestaurantView/RestaurantView.jsx'
 import PlayList from './components/PlayList/PlayList'
 import Lesson8 from './components/Lesson8.jsx'
 import Modal from './components/Modal/Modal.jsx'
+import Profile from "./components/Profile/Profile.jsx";
 
 function App() {
   return (
     <>
       <div>
-        <a href="https://github.com/priscilauchoa">
-          {" "}
-          <img
-            src="https://avatars.githubusercontent.com/u/22195904?v=4"
-            className="logo"
-            alt="Vite logo"
-          />
-        </a>
-      </div>
-      <h1>Priscila Flores </h1>
-      <div className="card">
-
-        <p>Hello there! 👋</p>
+        <Profile message="First Week"/>
         <CharacterCounter />
         <RestaurantView />
         <PlayList />
