@@ -33,7 +33,7 @@ const PlayList = () => {
 const Item = ({imageMusic, nameMusic, onClick}) => {
 
   return (
-    <>
+    <div className="container">
     <li className="playlist">
           <img className="playlist-img" src={imageMusic} alt={nameMusic}/>
           <div>
@@ -42,7 +42,7 @@ const Item = ({imageMusic, nameMusic, onClick}) => {
           </div>
     </li>
      
-    </>
+    </div>
   )
 }
 

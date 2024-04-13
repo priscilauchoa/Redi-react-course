@@ -25,7 +25,7 @@ function CharacterCounter() {
     }
   }
   return (
-    <div>
+    <div className="container">
       <h1>Characters Counter Input</h1>
       <input maxLength={50} onChange={(e) => counter(e)} type="text"></input>
       <br></br>

@@ -34,6 +34,12 @@
   }
 }
 
+.container {
+  background-color: rgb(170, 243, 218);
+  padding: 30px;
+  margin: 30px;
+}
+
 .card {
   padding: 2em;
 }
@@ -43,6 +49,7 @@
 }
 
 .counter {
+  align-items: center;
   display: flex;
   justify-content: space-around;
 }
@@ -66,11 +73,30 @@
  align-items: center;
 }
 
-.playlist > div > button {
-  margin: 30px;
-}
-
 .playlist-img {
   height: 100px !important;
   width: 100px !important;
+}
+
+
+.btn-red {
+  background-color: rgb(236, 125, 125);
+  color: white;
+}
+
+.btn-red:hover {
+  background-color: rgb(243, 22, 22);
+  color: white;
+  border: rgb(230, 163, 163) solid 1px;
+}
+
+.btn-green {
+  background-color: rgb(134, 211, 134);
+  color: white;
+}
+
+.btn-green:hover {
+  background-color: rgb(17, 141, 17);
+  color: white;
+  border: green;
 }
