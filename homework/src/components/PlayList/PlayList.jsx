@@ -1,56 +1,98 @@
+/* eslint-disable react/prop-types */
 // import './PlayList.css'
 import amy from "../../assets/amy.jpeg";
 import tool from "../../assets/tool.jpeg";
 import manchOrch from "../../assets/manchOrch.jpeg";
 import { useState } from "react";
+import YoutubePlayer from "../YouTubePlayer";
 
 const PlayList = () => {
   const [playList, setPlayList] = useState([]);
-  const addToPlayList = (music) => {
+  const [messageDiscount, setMessageDiscount] = useState(false);
+
+  const handleAdd = (music) => {
     setPlayList([...playList, music]);
   };
-  const playListMaps = playList.map((item, index) => (
-    <li key={index}>{item}</li>
-  ));
+
+  const handleRemove = (music) => {
+    setPlayList((playList) => {
+      return playList.filter((item) => item !== music);
+    });
+  };
+
+  const musics = [
+    {
+      name: "Back to Black - Amy Winehouse",
+      image: amy,
+      url: "https://www.youtube.com/watch?v=TJAfLE39ZZ8",
+    },
+    {
+      name: "Schism - too",
+      image: tool,
+      url: "https://www.youtube.com/watch?v=MM62wjLrgmA",
+    },
+    {
+      name: "The Silence - Manchester Orchestra",
+      image: manchOrch,
+      url: "https://www.youtube.com/watch?v=8ui9umU0C2g",
+    },
+  ];
+
+  const musicItem = musics.map((item) => {
+    return (
+      <>
+        <Item
+          imageMusic={item.image}
+          handleAdd={handleAdd}
+          nameMusic={item.name}
+          isInPlaylist={playList.includes(item.name)}
+          handleRemove={handleRemove}
+          url={item.url}
+        />
+      </>
+    );
+  });
+
+  const playListMaps = playList.map((item) => <li key={item}>{item}</li>);
   return (
     <div className="container">
       <h1>REDI React Playlist</h1>
-      <div className="plalist">
-        <ul>
-          Your Playlist: {playListMaps}
-          <br></br>
-        </ul>
-      </div>
-      <div className="menu">
-        <Item
-          imageMusic={amy}
-          onClick={addToPlayList}
-          nameMusic="Back to Black - Amy Winehouse"
-        />
-        <Item
-          imageMusic={tool}
-          onClick={addToPlayList}
-          nameMusic="Schism - tool"
-        />
-        <Item
-          imageMusic={manchOrch}
-          onClick={addToPlayList}
-          nameMusic="The Silence - Manchester Orchestra"
-        />
-      </div>
+      {playList.length > 0 && (
+        <div className="final_playlist">Your Playlist: {playListMaps}</div>
+      )}
+      <div className="playlist">{musicItem}</div>
+      {playList.length >= 3 && (
+        <h3 className="bc-red">You unlock 10% discount 😀</h3>
+      )}
     </div>
   );
 };
 
-const Item = ({ imageMusic, nameMusic, onClick }) => {
+const Item = ({
+  imageMusic,
+  nameMusic,
+  handleRemove,
+  handleAdd,
+  isInPlaylist,
+  url,
+}) => {
   return (
-      <li className="playlist">
-        <img className="playlist-img" src={imageMusic} alt={nameMusic} />
-        <div>
-          <h3>{nameMusic}</h3>
-          <button onClick={() => onClick(nameMusic)}>Add To Play List</button>
-        </div>
-      </li>
+    <li className="playlist_li">
+      {/* <img className="playlist-img" src={imageMusic} alt={nameMusic} /> */}
+      <YoutubePlayer url={url} />
+
+      <div>
+        <h3>{nameMusic}</h3>
+        {!isInPlaylist && (
+          <button onClick={() => handleAdd(nameMusic)}>Add music</button>
+        )}
+        {isInPlaylist && (
+          <button className="bc-red" onClick={() => handleRemove(nameMusic)}>
+            Remove music
+          </button>
+        )}
+      </div>
+    </li>
   );
 };
 
