@@ -5,7 +5,7 @@ import tool from "../../assets/tool.jpeg";
 import manchOrch from "../../assets/manchOrch.jpeg";
 import { useState } from "react";
 import YoutubePlayer from "../YouTubePlayer/YouTubePlayer";
-import ButtonModule from "../Button/ButtonModule";
+import ButtonModule from "../ButtonModule/ButtonModule";
 
 const PlayList = () => {
   const [playList, setPlayList] = useState([]);
