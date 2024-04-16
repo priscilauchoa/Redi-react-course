@@ -1,0 +1,7 @@
+.button {
+    background-color: #16cf85;
+  
+    &.selected {
+      background-color: #e69191;
+    } /* Darker shade when hovering over button */
+  }

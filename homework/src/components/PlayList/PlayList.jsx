@@ -5,6 +5,7 @@ import tool from "../../assets/tool.jpeg";
 import manchOrch from "../../assets/manchOrch.jpeg";
 import { useState } from "react";
 import YoutubePlayer from "../YouTubePlayer";
+import ButtonModule from "../Button/ButtonModule";
 
 const PlayList = () => {
   const [playList, setPlayList] = useState([]);
@@ -68,7 +69,6 @@ const PlayList = () => {
 };
 
 const Item = ({
-  imageMusic,
   nameMusic,
   handleRemove,
   handleAdd,
@@ -83,7 +83,7 @@ const Item = ({
       <div>
         <h3>{nameMusic}</h3>
         {!isInPlaylist && (
-          <button onClick={() => handleAdd(nameMusic)}>Add music</button>
+          <ButtonModule isSelected={isInPlaylist} onClick={() => handleAdd(nameMusic)}>Add music</ButtonModule>
         )}
         {isInPlaylist && (
           <button className="bc-red" onClick={() => handleRemove(nameMusic)}>
