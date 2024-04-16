@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import ReactPlayer from "react-player/youtube";
 
 export default function YoutubePlayer({ url }) {

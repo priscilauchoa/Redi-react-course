@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import '../RestaurantView//RestaurantView.css'
 import spaghettiImage from "../../assets/spaghetti.jpg"
 import lasagnaImage from "../../assets/lasagna.jpg"

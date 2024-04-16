@@ -50,8 +50,8 @@ const PasswordInput = () => {
         <input maxLength="10" value={text} onChange={(e)=>handleText(e.target.value)} type={typeInput} />
         <button onClick={showPass}>{typeInput == "password" ? "Show" : "Hide" }</button>
         <button disabled={disabled} onClick={clearPassword}>Clear</button> 
-      </div>
       {limitMessage && <p className="warning">🚨 Must be no more than 10 characters!</p> }
+      </div>
     </Fragment>
   );
 };

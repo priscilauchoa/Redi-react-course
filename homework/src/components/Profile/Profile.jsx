@@ -1,5 +1,4 @@
-import { useState } from "react";
-
+// eslint-disable-next-line react/prop-types
 function Profile({message}){
     return(
 <div className="bc-red container">
