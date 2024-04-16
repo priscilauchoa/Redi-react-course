@@ -11,13 +11,22 @@ function App() {
   return (
     <>
       <div>
+        <h2>Week 1 - First React Component</h2>
         <Profile message="First Week"/>
+        <h2>Week 2 - Props and State</h2>
         <CharacterCounter />
-        <RestaurantView />
-        <PlayList />
-        <Lesson8 />
-        <Modal />
+        <h2> Week 3 - Props, State, and events</h2>
         <Counter />
+        <RestaurantView />
+        <h2> Week 4 - Props, State, and Components Practice </h2>
+        {/* <PlayList /> started the exercise here and add more functionalities on the week 5 */}
+        <Lesson8 />
+        <h2> Week 5 - No class - Easter Holidays</h2>
+        <h3>Personal Practice</h3>
+        <Modal />
+        <h2>Week 6 - Conditional rendering </h2>
+        <PlayList />
+        <h2>Week 7</h2>
 
       </div>
     </>
@@ -25,45 +34,3 @@ function App() {
 }
 
 export default App;
-
-// function Button({ onClick, children }) {
-//   return (<button onClick={onClick}>{children}</button>);
-// }
-
-// // function CounterContent(currentCount) {
-
-// //   setCount()
-// //   return (
-// //     <div className='counter'>
-// //       <CounterButton onClick={coun)} />
-// //     </div>
-// //   )
-// // }
-
-// function ParentComponentFromModal() {
-//   const [modalOpen, setModelOpen] = useState(false);
-
-//   const handleOpenModal = () => {
-//     setModelOpen(true);
-//   };
-
-//   const handleCloseModal = () => {
-//     setModelOpen(false);
-//   };
-
-//   return (
-//     <div className="container">
-//       <Button onClick={handleOpenModal}>Open Modal</Button>
-//       {modalOpen && <Modal onClose={handleCloseModal}></Modal>}
-//     </div>
-//   );
-// }
-
-// function Modal({ onClose }) {
-//   return (
-//     <div>
-//       <Button onClick={onClose}>X</Button>
-//       <main></main>
-//     </div>
-//   );
-// }

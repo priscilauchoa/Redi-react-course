@@ -8,7 +8,6 @@ import YoutubePlayer from "../YouTubePlayer";
 
 const PlayList = () => {
   const [playList, setPlayList] = useState([]);
-  const [messageDiscount, setMessageDiscount] = useState(false);
 
   const handleAdd = (music) => {
     setPlayList([...playList, music]);
