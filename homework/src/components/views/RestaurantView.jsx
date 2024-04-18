@@ -1,9 +1,9 @@
 import "./RestaurantView.css";
 
 import { useState } from "react";
-import Cart from "../../Cart.jsx";
-import MenuItem from "../../MenuItem.jsx";
-import dishes from "../../mocks/dishes.json";
+import Cart from "../Cart.jsx";
+import MenuItem from "../MenuItem.jsx";
+import dishes from "../mocks/dishes.json";
 
 const RestaurantView = () => {
   const [selectedItems, setSelectedItems] = useState([]);

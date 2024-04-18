@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-// import './PlayList.css'
+import style from './PlayList.module.css'
 import amy from "../../assets/amy.jpeg";
 import tool from "../../assets/tool.jpeg";
 import manchOrch from "../../assets/manchOrch.jpeg";
@@ -58,9 +58,9 @@ const PlayList = () => {
     <div className="container">
       <h1>REDI React Playlist</h1>
       {playList.length > 0 && (
-        <div className="final_playlist">Your Playlist: {playListMaps}</div>
+        <div className={style.final_playlist}>Your Playlist: {playListMaps}</div>
       )}
-      <div className="playlist">{musicItem}</div>
+      <div className={style.playlist}>{musicItem}</div>
       {playList.length >= 3 && (
         <h3 className="bc-red">You unlock 10% discount 😀</h3>
       )}
@@ -76,7 +76,7 @@ const Item = ({
   url,
 }) => {
   return (
-    <li className="playlist_li">
+    <li className={style.playlist_li}>
       {/* <img className="playlist-img" src={imageMusic} alt={nameMusic} /> */}
       <YoutubePlayer url={url} />
 
