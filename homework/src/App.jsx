@@ -1,7 +1,7 @@
 import "./App.css";
 import Counter from './components/Counter/Counter.jsx'
 import CharacterCounter from '../src/components/CharacterCounter/CharacterCounter'
-import RestaurantView from './components/views/RestaurantView.jsx'
+import RestaurantView from '../src/components/RestaurantView/RestaurantView.jsx'
 import PlayList from './components/PlayList/PlayList'
 import Lesson8 from './components/Lesson8/Lesson8.jsx'
 import Modal from './components/Modal/Modal.jsx'
