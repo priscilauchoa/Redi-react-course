@@ -3,6 +3,7 @@ import style from "./PlayList.module.css";
 import { useState } from "react";
 import Item from "../Item/Item";
 import musicsList from "../../mocks/musics";
+import SearchField from "../SearchField/SearchField";
 
 const PlayList = () => {
   const [playList, setPlayList] = useState([]);
@@ -51,7 +52,7 @@ const PlayList = () => {
   const playListMaps = playList.map((item) => <li key={item}>{item}</li>);
   return (
     <div className="container">
-      <input type="text" onChange={handleOnChange} />
+      <SearchField handleOnChange={handleOnChange} />
       <h1>REDI React Playlist</h1>
       {playList.length > 0 && (
         <div className={style.final_playlist}>
